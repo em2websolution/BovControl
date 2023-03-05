@@ -15,8 +15,6 @@ const CheckListService = () => {
   const navigation = useNavigation();
 
   const fetchChecklists = async () => {
-    repository.clearAll();
-
     if (repository.checkNetworkConnection()) {
       const pendingCreate = await repository.retrievePendingCreate();
       const pendingUpdate = await repository.retrievePendingUpdate();
